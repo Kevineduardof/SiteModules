@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.header > li {
+    position: relative;
+}
+
+.header > li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    border-bottom: 2px solid white;
+    transition: width 0.3s ease-out;
+    width: 0;
+}
+
+.header > li:hover::after {
+    width: 100%;
+}
+
+.outdoor {
+    height: 100vh;
+    background-image: url("../img/montanha-noite.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.outdoor div {
+    height: 100%;
+    color: white;
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.outdoor h1 {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.outdoor p {
+    font-weight: bold;
+}
+
+.outdoor img {
+    width: 60px;
+    filter: invert();
+    padding-top: 40px;
+    cursor: pointer;
+}
+
+.outdoor img:hover {
+    transform: scale(1.1);
+}
+
+.etw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    gap: 45px;
+    padding-bottom: 60px;
+}
+
+.etw h1 {
+    font-size: 45px;
+}
+
+.etw p {
+    max-width: 40%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}
+
+.card h2 {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    z-index: 1;
+}
+
+.card p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1.5;
+    filter: brightness(50%);
+}
+
+.TheJournal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    background-color: black;
+    color: white;
+    padding-top: 4em;
+    padding-bottom: 5em;
+}
+
+.divCardsJ {
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.cardJ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cardJ img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 10px;
+}
+
+.cardJ h2 {
+    font-size: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cardJ h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transform-origin: left;
+    transition: width 0.3s ease;
+}
+
+.cardJ h2:hover::after {
+    width: 100%; 
+}
+
+.cardJ p {
+    font-weight: normal;
+}
+
+.cardJ #dt {
+    font-weight: bold;
+}
+
+.TheJournal a {
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    padding-top: 3em;
+}
+
+.TheJournal a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; 
+    background-color: blue; 
+    transform-origin: left;
+    transition: width 0.3s ease;
+}
+
+.TheJournal a:hover::after {
+    width: 100%;
+}
+
+.bgFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: white;
+    background-color: black;
+    padding-bottom: 30px;
+    min-height: 80vh;
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.3), black), url("https://img.freepik.com/fotos-premium/pico-majestoso-da-montanha-ao-entardecer-sem-pessoas-geradas-por-ia_188544-11747.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.bgFooter nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bgFooter nav p {
+    padding-right: 0.5em;
+}
+
+.bgFooter ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.bgFooter li {
+    display: flex;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bgFooter li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.bgFooter li:hover::after {
+    width: 100%;
+}
